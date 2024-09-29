@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CategorieComponent } from './categorie/categorie.component';
 import { ProduitComponent } from './produit/produit.component';
 import { MouvementComponent } from './mouvement/mouvement.component';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { MouvementComponent } from './mouvement/mouvement.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
